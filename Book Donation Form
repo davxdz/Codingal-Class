@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Donation Form</title>
+</head>
+
+<body>
+
+    <h1>Book Donation Form</h1>
+    <p>Thank you for supporting our community! Your generous book donations help us keep our collection vibrant and accessible
+    to everyone. Please complete this form and submit it alongside your donation.</p>
+    <hr>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Details</legend>
+        
+            <label>Your Name</label><br>
+            <input type="text" id="name" placeholder="Your Full Name"> <br><br>
+        
+            <label>Email Address/Phone </label><br>
+            <input type="text" id="add" placeholder="Your Email Address/Phone"><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+
+            <legend>Donation Details</legend>
+
+            <label>Total Number of Books</label>
+            <select id="num">
+                <option value="">-- Select Amount --</option>
+                <option value="2-3"> 2-3 Books</option>
+                <option value="5-6"> 5-6 Books</option>
+                <option value="8-10"> 8-10 Books</option>
+                </select><br><br>
+
+            <label>Condition of the Books</label>
+            <select id="con">
+                <option value="">-- Select Condition --</option>
+                <option value="New"> New</option>
+                <option value="Good"> Good</option>
+                <option value="Fair"> Fair</option>
+                </select><br><br>
+
+            <label>Categories of the Books</label>
+            <select id="cat">
+                <option value="">-- Select Categories --</option>
+                <option value="child"> Childrens</option>
+                <option value="fic"> Fiction</option>
+                <option value="acad"> Academics</option>
+
+        </fieldset>
+
+        <br>
+    </form>
+
+    </body>
+    </html>
+
