@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(10, 194, 250);
+    background-image: linear-gradient(to left, rgb(60, 101, 148), rgb(22, 5, 170));
+    background-position: top center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.page-header {
+    background-image: linear-gradient(to top left, rgb(61, 57, 66), rgb(0, 0, 0));
+    border-radius: 16px;
+    text-align: center;
+    color: rgb(5, 76, 143)
+}
+
+.fact-card {
+    background-color: rgb(162, 108, 197);
+    border-radius: 12px;
+    text-align: center;
+    color: black
+}
+
+.fact-card h2 {
+    color: rgb(112, 5, 77)
+}
+
+.rain {
+    width: 55px;
+    height: 65px;
+    background-color: rgb(54, 6, 117);
+    border-radius: 100%;
+    animation: twinkle 0.7s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        background-color: blueviolet;
+    }
+
+    to {
+        background-color: rgb(24, 9, 228);
+    }
+}
+
+.footer-text {
+    text-align: center;
+    color: rgb(87, 6, 107);
+}
