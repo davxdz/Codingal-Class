@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Superhero Card</title>
+        <style>
+
+            /* Typography - font, sizez weight, color for the whole page */
+            body {
+                background-color:aquamarine;
+                color:bisque;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            /* Typography + Text Shadow - big bold title with an orange shadow */
+            .hero-name {
+                font-size: 60px;
+                font-weight: bold;
+                color:rgb(42, 66, 204);
+                text-shadow: 8px 3px rgb(207, 10, 92)
+            }
+
+            /* Typography + Text Transform - tagline becomes Title Case */
+            .tagline{
+                font-style: italic;
+                color:cornflowerblue;
+                text-transform: capitalize;
+            }
+
+            /* Text Transform + Text Decoration - section headings in CAPS with underline */
+            .label {
+                text-transform: uppercase;
+                text-decoration: underline;
+                color:coral;
+            }
+
+            /* Typography - powers stand out in bold green */
+            .power {
+                font-weight: bold;
+                color:goldenrod;
+            }
+
+            /* Text Decoration - weaknesses are crossed out */
+            .weakness {
+                text-decoration: line-through;
+                color:darkolivegreen;
+            }
+
+            /* Transform - the badge is tilted to the side */ 
+            .badge {
+                font-size: 28px;
+                font-weight: bold;
+                color: gold;
+                transform: rotate(15deg);
+            }
+
+            /* Typography - footer-text */
+            .made-by {
+                color:brown;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 class="hero-name">Strong Boy</h1>
+        <p class="tagline">The strongest hero in town!</p>
+
+        <h2 class="label">Super Powers</h2>
+        <p class="power">Can Lift Cars</p>
+        <p class="power">Can Punch Through Concrete</p>
+
+        <h2 class="label">Weaknesses</h2>
+        <p class="weakness">No Training</p>
+        <p class="weakness">Unhealthy Foods</p>
+        <br><br><br>
+
+        <p class="badge"> Top Hero</p>
+
+        <p class="made-by">Created By David</p>
+
+    </body>
+</html>
