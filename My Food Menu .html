@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Food Menu</title>
+        <style>
+            body {
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background:cornsilk;
+                padding: 30px;
+                text-align: center;
+            }
+
+            h1 {  color:chocolate; }
+
+            /* Sibling Selector - styles the paragraph right after h1 */
+            h1 + p {
+                background:rgb(226, 223, 179);
+                padding: 10px 20px;
+                border-radius: 8px;
+                color:brown;
+                display:inline-block;
+            }
+
+            ul { padding:0; margin-top: 20px; }
+
+            /* Child Selector - styles only dircet li children of ul */
+            ul > li {
+                list-style: none;
+                font-size: 18px;
+                font-weight: bold;
+                color:dimgrey;
+                padding: 10px 20px;
+                margin: 6px auto;
+                width: 260px;
+                background:cornsilk;
+                border-radius: 8px;
+            }
+
+            /* nth-child - highlights the 3rd item as Chef's special */
+            ul li:nth-child(3) {
+                background:palegoldenrod;
+                color:chocolate;
+            }
+
+            .desc {
+                color:darkgrey;
+                margin-top: 20px;
+                font-size: 15px;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* first-letter - makes the first letter big and bold */
+            .desc::first-letter {
+                font-size: 220%;
+                color:chocolate;
+                font-weight: bold;
+            }
+
+            .links { margin-top: 25px; }
+
+            /* Hover Effect - links glow when mouse moves over them */
+            a {
+                color:chocolate;
+                text-decoration: none;
+                font-size: 15px;
+                margin: 0 12px;
+                padding: 8px 18px;
+                border: 2px solid #e65c00;
+                border-radius: 8px;
+            }
+
+            a:hover {
+                background: #e65c00;
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>My Food Menu</h1>
+        <p>Pick Your Favorite Dish And Enjoy!</p>
+
+        <ul>
+            <li>Pizza</li>
+            <li>French Fries</li>
+            <li>Fried Chicken-Best Selling</li>
+            <li>Ramen</li>
+            <li>Coffee Jelly</li>
+        </ul>
+
+        <p class="desc">Every dish on this menu is made with love and loads of flavor.Try them all to see what you like.</p>
+
+        <div class="links">
+            <a href="#">Order Now</a>
+            <a href="#">See More</a>
+        </div>
+    </body>
+</html>
