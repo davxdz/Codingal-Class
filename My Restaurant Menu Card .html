@@ -2,129 +2,108 @@
 <html>
 
 <head>
-    <title>My Restaurant Menu Card</title>
-
+    <title>My Restaurant Menu</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: Georgia, serif;
-            background-color: #fff8e7;
-            color: #3b2f2f;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background:rgb(117, 219, 15);
+            padding: 30px;
+            text-align: left;
         }
 
-        .menu-card {
-            width: 600px;
-            border: 3px solid #8b4513;
-            border-radius: 15px;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px #8b4513;
+        h1 {
+            color: rgb(10, 173, 64);
         }
 
-        .restaurant-name {
-            font-size: 42px;
-            font-weight: bold;
-            color: #8b4225;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 4px #d2b48c;
+        /* Sibling Selector - styles the paragraph right after h1 */
+        h1+p {
+            background: rgb(226, 223, 179);
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: rgb(9, 170, 81);
+            display: inline-block;
         }
 
-        .tagline {
+        ul {
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        /* Child Selector - styles only dircet li children of ul */
+        ul>li {
+            list-style: none;
             font-size: 18px;
-            font-style: italic;
-            text-align: center;
-            color: #6b4226;
-            text-decoration: underline;
-        }
-
-        .menu-section {
-            border: 2px solid #d2b48c;
-            box-shadow: 0 0 8px #d2b48c;
-        }
-
-        .section-title {
-            font-size: 26px;
-            color: #a0522d;
-            text-transform: capitalize;
-            text-decoration: overline;
-        }
-
-        .dish-name {
-            font-size: 20px;
             font-weight: bold;
-            color: #caba60;
-            text-transform: capitalize;
+            color: rgb(9, 182, 18);
+            padding: 10px 20px;
+            margin: 6px auto;
+            width: 260px;
+            background: cornsilk;
+            border-radius: 8px;
+            border: 3px solid rgb(12, 182, 26);
         }
 
-        .dish-name:hover {
-            transform: scale(1.1);
+        /* nth-child - highlights the 3rd item as Chef's special */
+        ul li:nth-child(3) {
+            background: palegoldenrod;
+            color: rgb(131, 226, 23);
+            border: 3px solid gold;
         }
 
-        .dish-description {
+        .desc {
+            color: rgb(7, 137, 212);
+            margin-top: 20px;
             font-size: 15px;
-            line-height: 1.6;
-            text-indent: 30px;
-            color: #555555;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .special-offer {
-            font-size: 22px;
+        /* first-letter - makes the first letter big and bold */
+        .desc::first-letter {
+            font-size: 220%;
+            color: rgb(10, 37, 196);
             font-weight: bold;
-            color: #ffffff;
-            background-color: #b22222;
-            text-align: center;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 3px #000000;
-            box-shadow: 0 0 12px #b22222;
-            transform: rotate(-2deg);
+        }
+
+        .links {
+            margin-top: 25px;
+        }
+
+        /* Hover Effect - links glow when mouse moves over them */
+        a {
+            color: rgb(30, 144, 210);
+            text-decoration: none;
+            font-size: 15px;
+            margin: 0 12px;
+            padding: 8px 18px;
+            border: 2px solid #3058db;
+            border-radius: 8px;
+        }
+
+        a:hover {
+            background: #0627b8;
+            color: white;
         }
     </style>
 </head>
 
 <body>
+    <h1>My Restaurant Menu</h1>
+    <p>Once you taste our food your going to want to come back for more.</p>
 
-    <div class="menu-card">
+    <ul>
+        <li>Fried Chicken</li>
+        <li>Fish Filet with Sauce</li>
+        <li>Burger Overload-Most Popular</li>
+        <li>Chicken Nuggets</li>
+        <li>French Fries</li>
+    </ul>
 
-        <h1 class="restaurant-name">Sweet Treats</h1>
+    <p class="desc">You will love everything we have on the menu!</p>
 
-        <p class="tagline">Comfort in every bite.</p>
-
-        <div class="menu-section">
-            <h2 class="section-title">Our All Time Favs</h2>
-
-            <p class="dish-name">Vanilla Ice Cream</p>
-            <p class="dish-description">
-                The Classic Ice cream that you can never go wrong with.
-            </p>
-
-            <p class="dish-name">Banana Split</p>
-            <p class="dish-description">
-                Soft Served banana with amazing toppings that will make your day better.
-            </p>
-        </div>
-
-        <div class="menu-section">
-            <h2 class="section-title">Combo Treats</h2>
-
-            <p class="dish-name">Sundae with Fries</p>
-            <p class="dish-description">
-                The perfect all around combo for a great snack.
-            </p>
-
-            <p class="dish-name">Churros And Waffles</p>
-            <p class="dish-description">
-                A unique ombo that will make you drool once you try it.
-            </p>
-        </div>
-
-        <p class="special-offer">Holiday special: 30% off!</p>
-
+    <div class="links">
+        <a href="#">Order Food?</a>
+        <a href="#">Request to Resto</a>
     </div>
-
 </body>
-
-</html>
