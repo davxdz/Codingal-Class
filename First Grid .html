@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Hobby Cards</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- STEP 1 - Bootstrap CSS link -->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <style>
+            body {
+                background-color: white;
+                font-family:Arial, Helvetica, sans-serif;
+                padding: 30px 15px;
+            }
+            h1 {
+                text-align: left;
+                color: plum;
+            }
+
+            .hobby-card {
+                text-align: center;
+                border: 2px dotted darkorchid;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: khaki;
+            }
+            .hobby-card h3 {
+                color: plum;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>My Hobby Cards</h1>
+
+        <!--STEP 2 - container keeps the layout neat and centered -->
+        <div class="container">
+
+            <!-- STEP 3 - row holds all the columns in one horizontal line -->
+             <div class="row">
+
+                <!-- STEP 4 - col-12 full width on phones
+                 col-md-6: half width on tablets
+                 col-lg-4: one-third on desktops -->
+                 <div class="col-12 col-md-6 col-lg-4">
+                    <div class="hobby-card">
+                        <h3>Badminton</h3>
+                        <p>I Like playing and training Badminton.</p>
+                        <img src="https://images.unsplash.com/photo-1722087642932-9b070e9a066e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFkbWludG9ufGVufDB8fDB8fHww" width="250px" height="250px">
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-md-6 col-lg-4">
+                    <div class="hobby-card">
+                        <h3>Sketching</h3>
+                        <p>I Like to Sketch and imporve my drawing skills</p>
+                        <img src="https://fullbloomclub.net/wp-content/uploads/2023/11/pencil6.jpg" width="250px" height="250px">
+                    </div>
+                 </div>
+
+                 <div class="col-12 col-md-6 col-lg-4">
+                    <div class="hobby-card">
+                        <h3>Coding</h3>
+                        <p>I Like to Code new applications and imporve my knowledge on technology.</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_IW3rGvLmQcBM0iWJLxVpbQ8lg5jsb7qGap3tLQKXuIPs_QPcENXTEWE&s=10" width="250px" height="250px">
+                    </div>
+                 </div>
+
+             </div>
+        </div>
+
+        <!-- STEP 5 - Bootstrap JS script -->
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> </script>
+
+    </body>
+</html>
