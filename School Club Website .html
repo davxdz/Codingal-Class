@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>School Club Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- STEP 1 - Bootstrap CSS link -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: khaki;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color:rgb(216, 139, 38);
+        }
+
+        .schoolclub-card {
+            text-align: center;
+            border: 2px dashed rgb(187, 142, 19);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgb(255, 242, 206);
+        }
+
+        .schoolclub-card h3 {
+            color:rgb(179, 124, 8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>School Club Website</h1>
+
+    <!--STEP 2 - container keeps the layout neat and centered -->
+    <div class="container">
+
+        <!-- STEP 3 - row holds all the columns in one horizontal line -->
+        <div class="row">
+
+            <!-- STEP 4 - col-12 full width on phones
+                 col-md-6: half width on tablets
+                 col-lg-4: one-third on desktops -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="schoolclub-card">
+                    <h3>English Club</h3>
+                    <p>Write powerful stories, debate big ideas, and present discoveries with confidence.</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgORvj9nt5amoruzp1RBW-H0x_GQBF7R6Zx-nLdwF7Wg&s=10"
+                        width="250px" height="250px">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="schoolclub-card">
+                    <h3>Math Club</h3>
+                    <p>Solve daily puzzles, crack logic codes, and find patterns in the world.</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMIlAbWYvUNKk2Gcvw-8F070tpyAdI2TSrFIJU-d-LRw&s=10" width="250px"
+                        height="250px">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="schoolclub-card">
+                    <h3>Science Club</h3>
+                    <p>Build fun experiments, test cool theories, and ask big questions.</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9xBPoT_TJ_Cdcub3nvIBPl5o3BQe_ghUBuYbEwRcC_g&s=10"
+                        width="250px" height="250px">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- STEP 5 - Bootstrap JS script -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> </script>
+
+</body>
+
+</html>
