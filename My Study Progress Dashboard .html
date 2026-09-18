@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Study Progress Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device=width" , initial-scale="1" />
+    <link rel="stylesheet" rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .jumbotron {
+            background-color: khaki;
+            border-top: 6px solid darkgoldenrod;
+        }
+
+        .jumbotron h1 {
+            color: darkgoldenrod;
+        }
+
+        .section-title {
+            color: darkgoldenrod;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOPIC 1: JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>My Study Progress</h1>
+            <p class="lead"> Welcome to My Sudy progress dashboard, Here we will see my how much I have studied in school.</p>
+            <!--TOPIC 2: BUTTONS -->
+            <button class="btn btn-primary">English</button>
+            <button class="btn btn-success">Science</button>
+            <button class="btn btn-warning">Math</button>
+            <button class="btn btn-danger">History</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- TOPIC 3: BADGES -->
+        <h2 class="section-title">
+            Assignments Accomplished <span class="badge badge-danger">4</span></h2>
+        <p>English <span class="badge badge-primary">8 topics</span></p>
+        <p>Science <span class="badge badge-success">6 experiments</span></p>
+        <p>Math <span class="badge badge-warning">7 equations</span></p>
+        <p>History <span class="badge badge-danger">5 discoveries</span></p>
+
+        <!-- TOPIC 4: PROGRESS BARS -->
+        <h2 class="section-title">Study Progress</h2>
+        <p>English</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-primary" style="width: 80%">80%</div>
+        </div>
+
+        <p>Science</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-success" style="width: 60%">60%</div>
+        </div>
+
+        <p>Math</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-warning" style="width: 70%">70%</div>
+        </div>
+
+        <p>History</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-danger" style="width: 50%">50%</div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> </script>
+</body>
+
+</html>
