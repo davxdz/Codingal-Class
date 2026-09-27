@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Calculator</title>
+    </head>
+    <body>
+        <center>
+            <h1 style="color:darkgoldenrod">Simple Calculator</h1>
+            <button type="button" onclick="calculator()">Calculate</button>
+            <p id="add"></p>
+            <p id="sub"></p>
+            <p id="mul"></p>
+            <p id="div"></p>
+
+            <script>
+                
+                function calculator() {
+                    var a = 12;
+                    var b = 4;
+                    document.getElementById("add").innerHTML = b + a;
+                    document.getElementById("sub").innerHTML = b - a;
+                    document.getElementById("mul").innerHTML = b * a;
+                    document.getElementById("div").innerHTML = b / a;
+                }
+            </script>
+        </center>
+    </body>
+</html>
