@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>JavaScript Arrays</h2>
+
+        <p id="demo"></p>
+
+        <script>
+            var soap = [
+                "Shampoo",
+                "Body Soap",
+                "Face Wash"
+            ];
+             document.getElementById("demo").innerHTML = soap[0]; 
+
+        </script> 
+
+        <h2>JavaScript Methods</h2>
+        <p id="myjoin"></p>
+        <p id="myfirstpop"></p>
+        <p id="mysecondpop"></p>
+        
+        <script>
+            var soap = ["Shampoo", "Body Soap", "Face Wash", "Conditioner",];
+
+            document.getElementById("myjoin").innerHTML = soap.join(" * ");
+
+            document.getElementById("myfirstpop").innerHTML = soap;
+            soap.pop();
+            document.getElementById("mysecondpop").innerHTML = soap;  
+        </script>
+
+        <h2>JavaScript Functions</h2>
+        <p>Average sum of prices of soap</p>
+        <p id="demos"></p>
+
+        <script>
+            function add(a, b) {
+                return a + b;
+            }
+
+            function average(a, b) {
+                return add(a, b) / 2;
+            }
+
+            let result = average(30, 40);
+            document.getElementById("demos").innerHTML = result;
+        </script>
+    </body>
+</html>
