@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Car Dealership</title>
+        <style>
+            body {
+                font-family:Arial, Helvetica, sans-serif;
+                background:khaki;
+                text-align: center;
+                padding: 30px;
+            }
+
+            h1 {
+                color:darkslateblue;
+            }
+
+            #Dealer {
+                border: 2px solid darkslateblue;
+                width: 300px;
+                margin: 16px auto;
+                padding: 12px;
+                border-radius: 10px;
+                background:khaki;
+            }
+
+            .zone {
+                border: 1px solid darkslateblue;
+                margin: 6px 0;
+                padding: 8px 12px;
+                border-radius: 6px;
+                text-align: left;
+            }
+
+            button {
+                background:darkslateblue;
+                color:white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        </style>
+        </head>
+        
+        <body>
+        
+            <h1>My Car DealerShip</h1>
+            <p>Use JavaScript and the DOM to add each car for Sale</p>
+        
+            <!--
+                DOm Tree: Dealer is the parent element node.
+                Zone dives are child element nodes. Car brands inside each span are text nodes.
+                -->
+            <div id="Dealer">
+                <div class="zone">Car 1: <span id="zone1"></span></div>
+                <div class="zone">Car 2: <span id="zone2"></span></div>
+                <div class="zone">Car 3: <span id="zone3"></span></div>
+                <div class="zone">Total Cars: <span id="total"></span></div>
+            </div>
+        
+            <br>
+        
+            <button onclick="openDeal()">Cars For Sale!</button>
+        
+            <p id="deal-status"></p>
+        
+            <script>
+
+                function openDeal() {
+
+                    /* Task 1 Add your first car to Zone 1 */
+                    document.getElementById("zone1").innerHTML = "Honda 20,000";
+
+                    /* Task 2 Add your second car to Zone 2 */
+                    document.getElementById("zone2").innerHTML = "Toyota 25,000";
+
+                    /* Task 3 Add your third car to Zone 3 */
+                    document.getElementById("zone3").innerHTML = "Jeep 30,000";
+
+                    /* Task 4 Show the total number of cars */
+                    document.getElementById("total").innerHTML = "3";
+
+                    /* Task 5 Change the dealership background color */
+                    document.getElementById("deal").style.backgroundColor = "darkgoldenrod";
+
+                    /* Task 6 Use the document object to show the page title */
+                    document.getElementById("deal-status").innerHTML = document.title + " is now open!";
+                }
+            </script>
+        </body>
+        </html>
+            
