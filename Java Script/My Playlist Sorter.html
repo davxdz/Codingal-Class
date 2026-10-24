@@ -81,7 +81,7 @@
                     document.getElementById("nameResult").innerHTML = "Z to A: " + songs;
              }
              function sortLeast() {
-                plays.sort(function (a,b) {return a - b;});
+                plays.sort(function (a,b) {return a - b;}); //compare function
                 document.getElementById("countResult").innerHTML = "Least played first: " + plays;
              }
              function sortMost() {
