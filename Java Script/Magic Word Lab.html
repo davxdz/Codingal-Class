@@ -53,8 +53,8 @@
                         Type a number above then press a button!
                     </div>
                 </div>
-        </div>
-        <!--TOPIC 3 search() and Replace() -->
+            </div>
+            <!--TOPIC 3 search() and Replace() -->
         <div class="card mb-4">
             <div class="card-body">
                 <h3 class="card-title">Find and Swap a Word</h3>
@@ -70,15 +70,15 @@
                  <button class="btn btn-success mr-2" onclick="doSearch()">
                     Find it!
                  </button>
-                <button class="btn btn-success mr-2" onclick="Replace()">
+                <button class="btn btn-success mr-2" onclick="doReplace()">
                     Swap it!
                 </button>
                 <div id="srResult" class="box p-3 mt-3 rounded">
                     Sentence: "The dragon flew over the big castle."
                 </div>
-                </div>
-                </div>
-                <!-- TOPIC 4: try/catch -->
+            </div>
+        </div>
+            <!-- TOPIC 4: try/catch -->
                 <div class="card mb-4">
                     <div class="card-body">
                         <h3 class="card-title">Catch the Mistake</h3>
@@ -89,10 +89,58 @@
                         </button>
                         <div id="errResult" class="box p-3 mt-3 rounded">
                             </div>
-                            </div>
                         </div>
                     </div>
-                    <script></script>
+                </div>
+                    <script>
+                        var sen = "The dragon flew over the big castle.";
+                        function checkTypes() {
+                            document.getElementById("typeResult").innerText = 
+                            "Score 42           - type: " + typeof 42 +
+                            "\nName  'Jake'       -type: " + typeof "Jake" +
+                            "\n" +
+                            "Game Over true - type: " + typeof true;
+                        }
+                        function toStr(){
+                            var v = document.getElementById("numIn").value;
+                            document.getElementById("convResult").innerHTML = 
+                            "String(" + v + ") =  '" +
+                            String(v) + "' - now it is a: " +
+                            typeof String(v);
+                        }
+                        function toNum() {
+                             var v = document.getElementById("numIn").value;
+                            document.getElementById("convResult").innerHTML =
+                                "Number(" + v + ") =  '" +
+                                Number(v) + "' - now it is a: " +
+                                typeof Number(v);
+                        }
+                        function doSearch() {
+                            var w = document.getElementById("findW").value;
+                            var p = sen.search(w);
+                            document.getElementById('srResult').innerHTML = p === -1
+                            ? "'" + w + "' is not in the sentence - try another word!"
+                            : "Found '" + w + "' hiding at position " + p + "!";
+                        }
+                        function doReplace() {
+                            var w = document.getElementById("findW").value;
+                            var r = document.getElementById("swapW").value;
+                            document.getElementById("srResult").innerHTML = "New sentence: " + sen.replace(w, r);
+                        }
+                        function trySafe() {
+                            try {
+                                var n = document.getElementById("divIn").value;
+                                if (n === "" || isNaN(n)) {
+                                    throw "That is not a number - you caught the error!";
+                                }
+                                document.getElementById("errResult").innerHTML = 
+                                "100 / " + n + " = " + 100 / Number(n) + " - well done!";
+                            } catch (err) {
+                                document.getElementById("errResult").innerHTML = 
+                                "Error caught: " + err;
+                            }
+                        }
+                    </script>
                         
     </body>
 </html>
