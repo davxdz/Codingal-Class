@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>School Event Data Viewer</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: khaki;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: darkgoldenrod;
+        }
+
+        button {
+            background: darkgoldenrod;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        div {
+            border: 1px solid darkgoldenrod;
+            width: 275px;
+            margin: 6px auto;
+            padding: 8px 12px;
+            text-align: left;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>School Event Data Viewer</h1>
+    <button onclick="showSchoolEvent()">Show School Event</button>
+    <button onclick="loadEventDetails()">Load Events Details</button>
+
+    <div>JSON Text: <span id="json-text"></span></div>
+    <div>Loading Event: <span id="loaded-event"></span></div>
+    <div>Loading Venue: <span id="loaded-venue"></span></div>
+    <div>Activities: <span id="status"></span></div>
+    <div>After Event: <span id="result"></span></div>
+
+    <script>
+
+        // JSON - the event stored as a JavaScript Object
+        let event = {
+            month: "December",
+            occasion: "Christmas",
+            venue: "School"
+        };
+
+        // JSON.stringify() and JSON.parse()
+        function showSchoolEvent() {
+            let jsonText = JSON.stringify(event); //coverts JSON to long text
+            let loadedEvent = JSON.parse(jsonText); //coverts long text Back to JSON
+
+            document.getElementById("json-text").innerHTML = jsonText;
+            document.getElementById("loaded-event").innerHTML = loadedEvent.occasion;
+            document.getElementById("loaded-venue").innerHTML = loadedEvent.venue;
+        }
+
+        // delay() - waits ms milliseconds 
+        function delay(ms) {
+            return new Promise(function (resolve) {
+                setTimeout(resolve, ms);
+            });
+        }
+
+        // async and await
+        async function loadEventDetails() {
+            document.getElementById("result").innerHTML = "";
+
+            // setTimeout with a callback function - runs after 1 second
+            document.getElementById("status").innerHTML = "Preparing The Event!";
+            setTimeout(function () {
+                document.getElementById("status").innerHTML = "Playing Games";
+            }, 1000);
+
+            //await - pause for 3 seconds 
+            await delay(3000);
+            document.getElementById("status").innerHTML = "Eating And Gift Giving";
+
+            //await - pause for 2 seconds
+            await delay(2000);
+            document.getElementById("result").innerHTML = "Going Home";
+        }
+    </script>
+</body>
+
+</html>
