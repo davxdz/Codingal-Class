@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perimeter Calculator using JS</title>
+        <script>
+            var choice = prompt(
+                "welcome to Perimeter Calculator." +
+                "\n Please enter Your Choice." +
+                "\n1. Perimeter Of Circle." +
+                "\n2. Perimeter of Triangle." +
+                "\n3. Perimeter of Square." +
+                "\n4. Perimeter of Rectangle",
+            );
+
+            if (choice == "1") {
+                var r = prompt(" Enter the radius");
+                var result = 3.14 * 2 * Number(r);
+                alert("The perimeter is " + result)
+            }
+
+            if (choice == "2") {
+                var s1 = prompt("Enter the side one");
+                var s2 = prompt("Enter the side two");
+                var s3 = prompt("Enter the side three");
+                var result = (Number(s1) + Number(s2) + Number(s3));
+                alert("The perimeter is " + result);
+            }
+
+            if (choice == "3") {
+                var s = prompt("Enter the side");
+                var result = 4 * Number(s);
+                alert("The perimeter is " + result);
+            }
+
+            if (choice == "4") {
+                var l = prompt("Enter the length");
+                var b = prompt("Enter the breadth");
+                var result = 2 * (Number(l) * Number(b))
+            }
+        </script>
+    </head>
+</html>
