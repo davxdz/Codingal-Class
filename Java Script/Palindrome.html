@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palindrome</title>
+        <style>
+            body {
+                font-family:Arial, Helvetica, sans-serif;
+                background:black;
+                color:khaki;
+                text-align: center;
+                padding-top: 12vh;
+            }
+            input {
+                padding: 10px;
+                font-size: 1.1rem;
+                border-radius: 6px;
+                border: 1px solid grey;
+                background:dimgray;
+                color: khaki;
+                text-align: center;
+            }
+            #out {
+                margin-top: 20px;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Palindrome Checker</h2>
+        <input type="text" id="in" placeholder="Type here..." oninput="Check()" />
+        <div id="out"></div>
+
+        <script>
+            function Check() {
+                const str = document.getElementById("in").value;
+                // Remove non-alphanumeric characters and convert to lowercase
+                const clean = str.replace(/[^A-Z0-9]/gi, "").toLowerCase();
+
+                // Reverse the cleaned string and check if it is a palindrome
+                const reverse = clean.split("").reverse().join("");
+
+                // Check if the cleaned string is equal to its reverse
+                const isPal = clean && clean === reverse;
+
+                // Update the output based on whether it is a palindrome or not
+                document.getElementById("out").innerHTML = str
+                ? isPal
+                ? "Palindrome"
+                : "Not a palindrome"
+                : "";
+                document.getElementById("out").style.color = isPal
+                ? "#4caf50"
+                : "#f44336";
+
+                
+            }
+        </script>
+    </body>
+</html>
