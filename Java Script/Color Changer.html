@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Color Changer</title>
-        <style>
-            button {
-                color: black;
-                background-color: darkolivegreen;
-                font: bold;
-                font-size: 12;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <button>Click Me</button>
 
-        <script>
-             var random = Math.floor(Math.random() * 256) + 1;
-        </script>
-    </body>
+<head>
+    <title>Color Changer</title>
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        button {
+            color: black;
+            background-color: darkolivegreen;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 12px 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="colorBtn">Click Me</button>
+
+    <script>
+        const button = document.getElementById('colorBtn');
+
+        button.addEventListener('click', function () {
+            var red = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        });
+    </script>
+
+</body>
+
 </html>
