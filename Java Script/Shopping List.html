@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping List</title>
+    <style>
+        body {
+            font: 12px sans-serif;
+            max-width: 240px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid khaki;
+            border-radius: 6px;
+        }
+
+        h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: darkgoldenrod;
+            margin: 10px 0 4px;
+        }
+
+        #myInput {
+            padding: 4px;
+            border: 1px solid khaki;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #myInput:focus {
+            border-color: darkgoldenrod;
+        }
+
+        #myForm button {
+            background: darkgoldenrod;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #myItem {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myItem li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 6px;
+            background: white;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        #myItem button {
+            background: none;
+            border: none;
+            color: darkred;
+            cursor: pointer;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Add Your Shopping List Here</h3>
+    <form id="myForm">
+        <input id="myInput" type="text" />
+        <button>Add</button>
+    </form>
+
+    <h3>Shopping List</h3>
+    <ul id="myItem"></ul>
+    <script>
+        var myForm = document.getElementById("myForm");
+        var myInput = document.getElementById("myInput");
+        var myItem = document.getElementById("myItem");
+
+        myForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            if (myInput.value.trim() === "") {
+                myInput.placeholder = "Please enter an item.";
+                myInput.style.borderColor = "#ef4444";
+                return;
+            }
+            else {
+                myInput.placeholder = "Enter an item";
+                myInput.style.borderColor = "#ccc";
+            }
+            createItem(myInput.value);
+        });
+
+        function createItem(inputItems) {
+            var items = `<li>${inputItems}
+                    <button onclick="deleteElement(this)">Delete</button> </li>`;
+            myItem.insertAdjacentHTML("beforeend", items);
+            myInput.value = "";
+            myInput.focus();
+        }
+
+        function deleteElement(ElementtoDelete) {
+            ElementtoDelete.parentElement.remove();
+        }
+    </script>
+</body>
+
+</html>
