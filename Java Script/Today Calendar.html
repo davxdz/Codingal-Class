@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f4f4f9;
+        }
+
+        .cal {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            margin-top: 15px;
+        }
+
+        .grid div {
+            padding: 6px;
+            border-radius: 4px;
+        }
+
+        .today {
+            background: #4f46e5;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cal">
+        <h3 id="date"></h3>
+        <div class="grid" id="grid"></div>
+    </div>
+
+    <script>
+        const now = new Date();
+        const y = now.getFullYear(), m = now.getMonth(), d = now.getDate();
+
+        document.getElementById('date').textContent = now.toLocaleDateString('en-US', {
+            weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
+        });
+
+        const grid = document.getElementById('grid');
+        ['S', 'M', 'T', 'W', 'T', 'F', 'S'].forEach(day => grid.innerHTML += `<b>${day}</b>`);
+
+        for (let i = 0; i < new Date(y, m, 1).getDay(); i++) grid.innerHTML += `<div></div>`;
+        for (let i = 1; i <= new Date(y, m + 1, 0).getDate(); i++) {
+            grid.innerHTML += `<div class="${i === d ? 'today' : ''}">${i}</div>`;
+        }
+    </script>
+
+</body>
+
+</html>
